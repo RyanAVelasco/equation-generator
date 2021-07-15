@@ -18,11 +18,11 @@ while 0 < total_equations:
             count_nums = count_nums - 1
     equations.append(1)
     print()
-    print(stylize("[ Question", colored.fg("green")), \
-        stylize(question_nums, colored.fg("cyan")), \
-        stylize("]", colored.fg("green")), \
+    print(stylize("[ Question", colored.fg("45")), \
+        stylize(question_nums, colored.fg("45")), \
+        stylize("]", colored.fg("45")), \
         " ".join(map(str,equations)))
-    print(stylize("================================", colored.fg("yellow")))
+    print(stylize("================================", colored.fg("7")))
     equations = []
     count_nums = base_nums
     question_nums = question_nums + 1
