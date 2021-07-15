@@ -2,14 +2,14 @@ import random
 import colored
 from colored import stylize
 
+total_equations = int(input('How many equations do you want? '))
+base_nums = int(input('How many values to calculate? '))-1
+
 equations = []
 signs = ['+', '-', '/', '*']
 count_nums = base_nums
 count = 0
 question_nums = 1
-
-total_equations = int(input('How many equations do you want? '))
-base_nums = int(input('How many values to calculate? '))-1
 
 while 0 < total_equations:
     while count != count_nums:
