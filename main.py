@@ -1,14 +1,14 @@
 import random
-
-total_equations = 100
+import colored
+from colored import stylize
 
 equations = []
 signs = ['+', '-', '/', '*']
-
+total_equations = int(input('How many equations do you want? '))
 base_nums = int(input('How many values to calculate? '))-1
 count_nums = base_nums
 count = 0
-y = 0
+question_nums = 1
 
 while 0 < total_equations:
     while count != count_nums:
@@ -16,9 +16,15 @@ while 0 < total_equations:
             equations.append(random.choice(signs))
             count_nums = count_nums - 1
     equations.append(1)
-    print(" ".join(map(str,equations)))
+    print()
+    print(stylize("[ Question", colored.fg("green")), \
+        stylize(question_nums, colored.fg("cyan")), \
+        stylize("]", colored.fg("green")), \
+        " ".join(map(str,equations)))
+    print(stylize("================================", colored.fg("yellow")))
     equations = []
     count_nums = base_nums
+    question_nums = question_nums + 1
     total_equations = total_equations - 1
 
 # while count < total_equations:
